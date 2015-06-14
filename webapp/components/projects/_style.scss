@@ -1,0 +1,22 @@
+.projects {
+    @include container;
+    min-height: 50em;
+    padding: 2em 4em;
+    .project {
+        @include clearfix;
+        table {
+            tbody {
+                tr {
+                    td {
+                        vertical-align: middle;
+                        .progress {
+                            margin: 0;
+                            height: 2em;
+                            min-width: 10em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+.calendar {
+	@include container;
+	$height: 5em;
+	$bg-color: darken(white, 5%);
+	position: relative;
+	background-color: $bg-color;
+	height: $height;
+	text-align: center;
+
+	.fa {
+		margin-right: 0.5em;
+	}
+
+	.left-controls {
+		display: block;
+		position: absolute;
+		left: 0;
+		height: $height;
+		width: 20%;
+		text-align: left;
+		padding: 1em;
+		button {
+			height: 100%;
+			width: 10em;
+		}
+	}
+
+	.center-controls {
+		height: $height;
+		width: 60%;
+		margin: 0 auto;
+		text-align: center;
+
+		.cal-nav {
+			display: inline-block;
+			width: 50%;
+			height: $height;
+			position: relative;
+
+			span {
+				position: absolute;
+				margin: auto;
+				top: 0; 
+				left: 0; 
+				bottom: 0; 
+				right: 0;
+				height: 60%;
+			}
+
+			button {
+				display: inline-block;
+				position: absolute;
+				z-index: 999;
+
+				&:first-child {
+					top: 0; 
+					left: 0; 
+					bottom: 0;
+					height: $height/2;
+					margin: auto;
+				}
+
+				&:last-child {
+					top: 0; 
+					bottom: 0; 
+					right: 0;
+					height: $height/2;
+					margin: auto;
+				}
+			}
+		}
+	}
+
+	.right-controls {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: $height;
+		width: 20%;
+		padding: 1em;
+		text-align: right;
+		margin: auto;
+
+		.btn-group {
+			height: 100%;
+			button {
+				height: 100%;
+				width: 10em;
+			}
+		}
+	}
+
+	.project-selector {
+		@include container;
+		height: 3em;
+		display: block;
+		background-color: lighten(red, 30%);
+	}
+
+	.calendar-content {
+		@include container;
+		@include clearfix;
+		display: block;
+		width: 100%;
+		ul {
+			list-style: none;
+			li {
+				@include gallery(2 of 14 0);
+				border: solid thin darken(white, 10%);
+				border-collapse: true;
+				padding: 1em;
+				
+				&:last-child {
+					@include gallery(2 of 14 last 0);
+				}
+
+				.day-heading {
+					min-height: 2em;
+				}
+
+				.day-content {
+					min-height: 48em;
+					border-top: solid thin darken(white, 10%);
+				}
+			}
+		}
+	}
+
+	.day-selector {
+		@include container;
+		height: 3em;
+		cursor: pointer;
+
+		span {
+			@include gallery(1 of 31 0);
+			border: solid thin darken(white, 10%);
+			border-right: none;
+			border-top: none;
+
+			&:hover {
+				background-color: darken(white, 10%);
+			}
+
+			&:active {
+				background-color: lighten(red, 30%);
+			}
+		}
+	}
+}

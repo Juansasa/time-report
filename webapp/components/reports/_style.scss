@@ -1,0 +1,144 @@
+.reports {
+    .day-selection {
+    	$height: 5em;
+    	display: block;
+    	height: $height;
+    	text-align: center;
+    	background-color: darken(white, 5%);
+		.cal-nav {
+			display: inline-block;
+			width: 20em;
+			height: $height;
+			position: relative;
+
+			span {
+				position: absolute;
+				margin: auto;
+				top: 0; 
+				left: 0; 
+				bottom: 0; 
+				right: 0;
+				height: 60%;
+			}
+
+			button {
+				display: inline-block;
+				position: absolute;
+				z-index: 999;
+
+				&:first-child {
+					top: 0; 
+					left: 0; 
+					bottom: 0;
+					height: $height/2;
+					margin: auto;
+				}
+
+				&:last-child {
+					top: 0; 
+					bottom: 0; 
+					right: 0;
+					height: $height/2;
+					margin: auto;
+				}
+			}
+		}
+    }
+
+    .project-selection {
+		margin: 0 4em;
+    }
+
+    .time-slots {
+		margin: 1em 6em;
+		height: 100%;
+		.slot-item {
+			@include container;
+			position: relative;
+			border: solid thin darken(white, 10%);
+			border-radius: 0.5em;
+			padding: 1em;
+			margin-bottom: 1em;
+
+			&:hover {
+				background-color: darken(white, 10%);
+			}
+
+			.start-time {
+				font-size: 0.8em;
+				position: absolute;
+				top: 0;
+				left: -3em;
+			}
+
+			.select-slot-checkbox {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -2em;
+				height: 1em;
+				margin: auto 0;
+			}
+
+			.end-time {
+				font-size: 0.8em;
+				position: absolute;
+				bottom: 0;
+				left: -3em;
+			}
+
+			.slot-heading {
+				@include span(2 of 13 first 0);
+			}
+
+			.slot-description {
+				@include span(3 of 13 0);
+				display: inline-block;
+				
+			}
+
+			.slot-logged {
+				@include span(3 of 13 0);
+				
+			}
+
+			.slot-planned {
+				@include span(3 of 13 0);
+			}
+
+			.slot-edit {
+				@include span(2 of 13 last 0);
+				button {
+					float: right;
+				}
+			}
+		}
+    }
+
+    .day-selector {
+    	@include container;
+    	text-align: center;
+    }
+
+    .summary {
+    	padding: 0 6em;
+
+    	h4 {
+    		padding: 0.5em 0;
+    		border-bottom: solid thin darken(white, 15%);
+    	}
+
+    	.project-summary {
+    		float: right;
+    		.summary-item {
+    			text-align: left;
+    			width: 20em;
+    			max-width: 20em;
+
+    			span {
+    				width: 100%;
+    			}
+    		}
+    	}
+    }
+}

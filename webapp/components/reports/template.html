@@ -1,0 +1,106 @@
+<div class="reports">
+    <div class="day-selection">
+        <div class="cal-nav">
+            <button class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i></button>
+            <span>
+				<b>June - 2015</b>
+				<p>Monday</p>
+			</span>
+            <button class="btn btn-default"><i class="glyphicon glyphicon-chevron-right"></i></button>
+        </div>
+    </div>
+    <div class="day-selector">
+        <div class="btn-group">
+            <button class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+            <button class="btn btn-default" ng-model="test" ng-repeat="day in getDays() track by $index" btn-checkbox>{{$index + 1}}</button>
+            <button class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <div class="project-selection">
+    </div>
+    <div class="time-slots">
+        <div class="day-wrapper">
+            <h3>Monday</h3>
+            <div class="slot-item">
+                <i class="start-time">8:00</i>
+                <input class="select-slot-checkbox" type="checkbox">
+                <i class="end-time">12:00</i>
+                <div class="slot-heading">
+                    <label><i class="fa fa-suitcase fa-2x" style="color: red"></i> <b> Time tracking</b></label>
+                </div>
+                <div class="slot-description">
+                    <i>Meeting with Anna</i>
+                </div>
+                <div class="slot-logged">
+                    <b>1 hours</b>
+                </div>
+                <div class="slot-planned">
+                    <b>2 hours</b>
+                </div>
+                <div class="slot-edit">
+                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="slot-item">
+                <i class="start-time">13:00</i>
+                <input class="select-slot-checkbox" type="checkbox">
+                <i class="end-time">15:00</i>
+                <div class="slot-heading">
+                    <label><i class="fa fa-suitcase fa-2x" style="color: red"></i> <b> Project previa</b></label>
+                </div>
+                <div class="slot-description">
+                    <i>Project presentation</i>
+                </div>
+                <div class="slot-logged">
+                    <b>1 hours</b>
+                </div>
+                <div class="slot-planned">
+                    <b>2 hours</b>
+                </div>
+                <div class="slot-edit">
+                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="slot-item">
+                <i class="start-time">15:00</i>
+                <input class="select-slot-checkbox" type="checkbox">
+                <i class="end-time">17:00</i>
+                <div class="slot-heading">
+                    <label><i class="fa fa-suitcase fa-2x" style="color: red"></i> <b> Awsome 3</b></label>
+                </div>
+                <div class="slot-description">
+                    <i>Workshop</i>
+                </div>
+                <div class="slot-logged">
+                    <b>1 hours</b>
+                </div>
+                <div class="slot-planned">
+                    <b>2 hours</b>
+                </div>
+                <div class="slot-edit">
+                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="summary">
+        <h4>Summary</h4>
+        <div class="project-summary">
+            <div class="summary-item">
+                <label><i class="fa fa-suitcase" style="color: red"></i> Project 1</label>
+                <progressbar type="warning" value="55"></progressbar>
+            </div>
+            <div class="summary-item">
+                <label><i class="fa fa-suitcase" style="color: blue"></i> Project 2</label>
+                <progressbar type="success" value="100"></progressbar>
+            </div>
+            <div class="summary-item">
+                <label><i class="fa fa-suitcase" style="color: green"></i> Project 3</label>
+                <progressbar type="danger" value="10"></progressbar>
+            </div>
+            <div class="summary-item">
+                <span><b>Total: </b>144 hours</span>
+            </div>
+        </div>
+    </div>
+</div>

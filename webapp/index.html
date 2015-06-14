@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" ng-app="time">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{title | translate}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- build:css({.tmp,webapp}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,webapp}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automaticaly insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+
+<body class="va-debug">
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="navigation" role="banner">
+        <div class="navigation-wrapper">
+            <a href="javascript:void(0)" class="logo">
+                <img src="http://www.rommedahl.nu/widget/image/placeholder.png" alt="Logo Image">
+            </a>
+            <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu" translate>MENU</a>
+            <nav role="navigation">
+                <ul id="js-navigation-menu" class="navigation-menu show">
+                    <li ui-sref="calendars" ui-sref-active="active-nav-item" class="nav-link"><a translate>Calendars</a></li>
+                    <li ui-sref="projects" ui-sref-active="active-nav-item" class="nav-link"><a>Projects</a></li>
+                    <li ui-sref="colaborators" ui-sref-active="active-nav-item" class="nav-link"><a>Colaborators</a></li>
+                    <li ui-sref="reports" ui-sref-active="active-nav-item" class="nav-link"><a>Reports</a></li>
+                    <li ui-sref="settings" ui-sref-active="active-nav-item" class="nav-link"><a>Settings</a></li>
+                    <li class="nav-right">
+                        <ul>
+                            <li class="nav-link">
+                                <a class="fa fa-bell-o"></a>
+                            </li>
+                            <li class="nav-link">
+                                <img src="http://isrart.co.il/default_avatar_medium.png" alt="Avatar Image">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div ng-if="false" class="loading-area">
+        <span us-spinner spinner-key="globalLoading">Show loading messages</span>
+    </div>
+    <div ui-view></div>
+    <!-- build:js(webapp) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- run `gulp wiredep` to automaticaly populate bower script dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,.tmp/partials,webapp}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automaticaly insert here -->
+    <!-- endinject -->
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+
+</html>

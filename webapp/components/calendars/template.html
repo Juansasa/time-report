@@ -1,0 +1,101 @@
+<div class="calendar">
+    <div class="controls">
+        <div class="left-controls">
+            <button ng-click="isPsOpen = !isPsOpen" class="btn btn-default"><i class="fa fa-tasks"></i>Calendars</button>
+        </div>
+        <div class="center-controls">
+            <div class="cal-nav">
+                <button class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <span>
+					<b>Week : 23</b>
+					<p>Jun 08 - Jun 14</p>
+				</span>
+                <button class="btn btn-default"><i class="glyphicon glyphicon-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="right-controls">
+            <div class="btn-group" dropdown>
+                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
+                    <i class="fa fa-calendar-o"></i> Week
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Day</a></li>
+                    <li><a href="#">Week</a></li>
+                    <li><a href="#">Month</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-selector" ng-show="isPsOpen"></div>
+
+    <div class="calendar-content">
+        <ul>
+            <li class="day">
+                <div class="day-heading">
+                	<b>Monday</b>
+                </div>
+                <div class="day-content">
+                	
+                </div>
+            </li>
+
+            <li class="day">
+                <div class="day-heading">
+                	<b>Tuesday</b>
+                </div>
+                <div class="day-content">
+                </div>
+            </li>
+
+            <li class="day">
+                <div class="day-heading">
+                	<b>Wednesday</b>
+                </div>
+                <div class="day-content">
+                </div>
+            </li>
+
+            <li class="day">
+                <div class="day-heading">
+                	<b>Thursday</b>
+                </div>
+                <div class="day-content">
+                </div>
+            </li>
+
+            <li class="day">
+                <div class="day-heading">
+                	<b>Friday</b>
+                </div>
+                <div class="day-content">
+                </div>
+            </li>
+
+            <li class="day">
+                <div class="day-heading">
+                	<b>Saturday</b>
+                </div>
+                <div class="day-content">
+                </div>
+            </li>
+
+            <li class="day">
+                <div class="day-heading">
+                	<b>Sunday</b>
+                </div>
+                <div class="day-content">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="day-selector">
+        <div class="btn-group">
+            <button class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+            <button class="btn btn-default" ng-model="test" ng-repeat="day in getDays() track by $index" btn-checkbox>{{$index + 1}}</button>
+            <button class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+        </div>
+    </div>
+</div>
